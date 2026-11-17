@@ -83,6 +83,7 @@ set -eo pipefail
 dest=%{buildroot}%{_datadir}/scala-213-part1/seed
 /bin/mkdir -p "$dest/official-2116" "$dest/verify/v2.11.6"
 /bin/cp -a official-2116/. "$dest/official-2116/"
+/bin/rm -rf "$dest/official-2116/.git"
 if [ -s verify/v2.11.6/run.log ]; then
 	/bin/cp -a verify/v2.11.6/run.log "$dest/verify/v2.11.6/run.log"
 fi
